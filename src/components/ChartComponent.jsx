@@ -1,7 +1,7 @@
 import React, {useEffect, useRef } from "react";
 import Chart from "chart.js/auto";  // importing chart.js with auto config
 
-const ChartComponent = {{type, data, options}} => {
+const ChartComponent = ({type, data, options}) => {
     const chartRef = useRef(null); //reference for the <canvas> element
     const chartInstanceRef = useRef(null); //reference for chart.js
 
