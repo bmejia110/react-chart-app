@@ -22,4 +22,20 @@ const App = () => {
     };
     fetchData();
   }, []);
-}
+
+  if (!chartData) {
+    return <div>Loading...</div>
+  }
+
+  return (
+    <div style={{ textAlign: "center" }}>
+      <h1>Dynamic Charts Dashboard</h1>
+      <BarChart data={chartData} />
+      <LineChart data={chartData} />
+      <ScatterChart data={chartData} />
+      <BubbleChart data={chartData} />
+    </div>
+  );
+};
+
+export default App;
