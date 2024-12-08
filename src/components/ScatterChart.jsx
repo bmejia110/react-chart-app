@@ -6,14 +6,14 @@ const ScatterChart = ({ data }) => {
         labels: data.months,
         datasets: [
             {
-                label: "Expenses vs Porfits",
+                label: "Expenses vs Porfits",  //dataset label
                 data: data.expenses.map((expense, index) => ({
-                    x: expense,
-                    y: data.profits[index],
+                    x: expense,  // x axis expenses
+                    y: data.profits[index],  // y axis profits
                 })),
-                backgroundColor: "rgba(225,99,132, 0.2)",
-                borderColor: "rgba(255,99,132, 1)",
-                pointRadius: 5,
+                backgroundColor: "rgba(225,99,132, 0.2)",  //point fill color
+                borderColor: "rgba(255,99,132, 1)",  // point border color
+                pointRadius: 5,  // the size of each point
             },
         ],
     };
@@ -23,12 +23,12 @@ const ScatterChart = ({ data }) => {
             x: {
                 title: {
                     display: true,
-                    text: "Expenses",
+                    text: "Expenses",  //x title
                 },
                 y: {
                     title: {
                         display: true,
-                        text: "Profits",
+                        text: "Profits",  //y title
                     },
                 },
             },

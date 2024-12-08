@@ -3,14 +3,14 @@ import ChartComponent from "./ChartComponent.jsx"
 
 const LineChart = ({ data }) => {
     const lineChartData = {
-        labels: data.months,
+        labels: data.months, //x axis labels
         datasets: [
             {
-                label: "Monthly Porfits",
-                data: data.profits,
-                borderColor: "purple",
-                fill: false,
-                tension: 0.1,
+                label: "Monthly Porfits", //dataset label
+                data: data.profits,  // y axis values
+                borderColor: "purple",  // line color
+                fill: false,  //no fill under the line
+                tension: 0.1,  //smoothness of line
             },
         ],
     };
@@ -18,7 +18,7 @@ const LineChart = ({ data }) => {
     const lineChartOptions = {
         scales: {
             y: {
-                beginAtZero: true,
+                beginAtZero: true,   //makes sure y axis starts at 0
             },
         },
     };
