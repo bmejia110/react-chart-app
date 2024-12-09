@@ -6,7 +6,7 @@ const ChartComponent = ({type, data, options}) => {
     const chartInstanceRef = useRef(null); //reference for chart.js
 
     useEffect(() => {
-        const ctx = chartRef.current.getcontext("2d");
+        const ctx = chartRef.current.getContext("2d");
 
         if (chartInstanceRef.current) {  // if chart exist it will destroy it
             chartInstanceRef.current.destroy();
